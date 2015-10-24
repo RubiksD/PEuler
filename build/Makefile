@@ -9,11 +9,17 @@ POST_COMPILATION_FLAGS = -lm
 
 OUTPUT1 = PE001
 OUTPUT2 = PE002
+OUTPUT3 = PE003
 
 INCLUDE = -I ../lib/include
 
+LIB_PATH = ../lib/src
+
+SRC_LIB = $(LIB_PATH)/primes.c
+
 SRC1	=	$(SRC_PATH)/PE001.c
 SRC2	=	$(SRC_PATH)/PE002.c
+SRC3	=	$(SRC_PATH)/PE003.c
 
 FLAGS += $(INCLUDE) $(PRE_COMPILATION_FLAGS)
 
@@ -22,6 +28,9 @@ PE001:	clean
 
 PE002:	clean
 	$(CC) $(FLAGS) $(SRC2) -o $(OUTPUT2).out $(POST_COMPILATION_FLAGS)
+
+PE003:	clean
+	$(CC) $(FLAGS) $(SRC_LIB) $(SRC3) -o $(OUTPUT3).out $(POST_COMPILATION_FLAGS)
 
 clean:
 	rm -f *.map
