@@ -6,14 +6,22 @@ NM = nm
 SRC_PATH = ../src
 PRE_COMPILATION_FLAGS = -Wall -O3 -g
 POST_COMPILATION_FLAGS = -lm
+
 OUTPUT1 = PE001
+OUTPUT2 = PE002
+
 INCLUDE = -I ../lib/include
 
 SRC1	=	$(SRC_PATH)/PE001.c
+SRC2	=	$(SRC_PATH)/PE002.c
+
 FLAGS += $(INCLUDE) $(PRE_COMPILATION_FLAGS)
 
 PE001:	clean
 	$(CC) $(FLAGS) $(SRC1) -o $(OUTPUT1).out $(POST_COMPILATION_FLAGS)
+
+PE002:	clean
+	$(CC) $(FLAGS) $(SRC2) -o $(OUTPUT2).out $(POST_COMPILATION_FLAGS)
 
 clean:
 	rm -f *.map
