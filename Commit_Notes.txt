@@ -16,3 +16,6 @@ Commit Number:	5
 Commit Number:	6
 	-	Problem number 5
 	- Added new make type
+
+Commit Number:	7
+	-	Updated Readme.md
