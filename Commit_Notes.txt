@@ -12,3 +12,7 @@ Commit Number:	4
 
 Commit Number:	5
 	-	Problem number 4
+
+Commit Number:	6
+	-	Problem number 5
+	- Added new make type
